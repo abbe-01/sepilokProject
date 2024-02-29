@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('checks', function (Blueprint $table) {
             $table->id('checkID');
             $table->foreignId('staffID')->constrained('staffs', 'staffID');
-            $table->time('checkIn');
-            $table->time('checkOut');
-            $table->date('checkDate');
+            $table->time('checkIn')->nullable();
+            $table->time('checkOut')->nullable();
+            $table->date('checkDate')->nullable();
             $table->timestamps();
         });
     }

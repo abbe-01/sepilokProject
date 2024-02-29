@@ -41,7 +41,7 @@
                 </div>
 
                 <div class="contactStaff">
-                    <label for="staffContact">Country:</label>
+                    <label for="staffContact">Contact No.::</label>
                     <textarea id="staffContact" name="staffContact" readonly>{{ $staff->staffContact }}</textarea><br>
 
                 </div>

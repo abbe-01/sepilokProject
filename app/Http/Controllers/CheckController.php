@@ -21,9 +21,9 @@ class CheckController extends Controller
     public function checkPost(Request $request){
 
             $data = $request->validate([
-                'checkIn' => ['required', 'date_format:H:i'], 
-                'checkOut' => ['required', 'date_format:H:i'], 
-                'checkDate' => ['required', 'date']
+                'checkIn' => ['nullable', 'date_format:H:i'], 
+                'checkOut' => ['nullable', 'date_format:H:i'], 
+                'checkDate' => ['nullable', 'date']
             ]);
     
             // to ensure no malicious people can display or store the actual code (html or php) or the input
@@ -75,9 +75,9 @@ class CheckController extends Controller
     public function updateEditCheck(Check $check, Request $request){
 
         $data = $request->validate([
-            'checkIn' => ['required', 'date_format:H:i'], 
-            'checkOut' => ['required', 'date_format:H:i'], 
-            'checkDate' => ['required', 'date']
+            'checkIn' => ['nullable', 'date_format:H:i'], 
+            'checkOut' => ['nullable', 'date_format:H:i'], 
+            'checkDate' => ['nullable', 'date']
         ]);
 
         // to ensure no malicious people can display or store the actual code (html or php) or the input

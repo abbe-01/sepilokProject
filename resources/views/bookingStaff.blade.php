@@ -29,12 +29,12 @@
                         <th>Booking ID</th>
                         <th>Name</th>
                         <th>Contact</th>
-                        <th>Identification Number</th>
                         <th>Nationality</th>
                         <th>Country</th>
                         <th>Adults</th>
                         <th>Children</th>
                         <th>Date</th>
+                        <th>Payment Method</th>
                         <th>Time Slot</th>
                         <th>Status</th>
                         <th>Edit</th>
@@ -46,12 +46,12 @@
                         <td>{{$booking->booking_ID}}</td>
                         <td>{{$booking->booking_Name}}</td>
                         <td>{{$booking->booking_Contact}}</td>
-                        <td>{{$booking->booking_IC}}</td>
                         <td>{{$booking->booking_Nationality}}</td>
                         <td>{{$booking->booking_Country}}</td>
                         <td>{{$booking->booking_Adults}}</td>
                         <td>{{$booking->booking_Children}}</td>
                         <td>{{$booking->booking_Date}}</td>
+                        <td>{{$booking->paymentMethod}}</td>
                         <td>{{$booking->time_slot}}</td>
                         <td>{{$booking->booking_Status}}</td>
                         <td>

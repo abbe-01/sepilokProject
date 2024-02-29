@@ -8,38 +8,37 @@
             <div class="logo2">
     @auth
         <ul>
-            @if(in_array(auth()->user()->usertype, ['admin', 'staff']))
+            @if(in_array(auth()->user()->usertype, ['staff']))
 
-                <!-- Common Navigation Menu -->
-                <li>
-                    <a href="home" class="staffHome"></i>Home</a>
-                <li>
-                    <a href="task" class="work"></i>Work</a>
-                </li>
-                <li>
-                    <a href="inventory" class="inventory"></i>Inventory</a>
-                </li>
-                <li>
-                    <a href="locker" class="locker"></i>Locker</a>
-                </li>
-                <li>
-                    <a href="bookingStaff" class="bookStaff"></i>Booking</a>
-                    
-                </li>
-                
-                @if(auth()->user()->usertype === 'staff')
-                <li>
-                <a href="profileStaff" class="profileStaff"></i>Staff</a>
-                </li>
-                @else
-                <!-- Additional Admin Link -->
-                <li>
-                    <a href="registerStaff" class="registerStaff"></i>Register</a>
-                </li>
-                @endif
-
+                    <!-- Common Navigation Menu for Staffs -->
+                    <li>
+                        <a href="home" class="staffHome"></i>Home</a>
+                    <li>
+                        <a href="task" class="work"></i>Work</a>
+                    </li>
+                    <li>
+                        <a href="inventory" class="inventory"></i>Inventory</a>
+                    </li>
+                    <li>
+                        <a href="locker" class="locker"></i>Locker</a>
+                    </li>
+                    <li>
+                        <a href="bookingStaff" class="bookStaff"></i>Booking</a>
+                        
+                    </li>
+                    <li>
+                        <a href="profileStaff" class="profileStaff"></i>Staff</a>
+                        </li>
+            @elseif(auth()->user()->usertype === 'admin')
+                    <li>
+                        <a href="home" class="staffHome"></i>Home</a>
+                    <li>
+                        <!-- Additional Admin Link -->
+                        <li>
+                            <a href="registerStaff" class="registerStaff"></i>Register</a>
+                        </li>
             @else
-                <!-- Additional User Link -->
+                <!-- For Visitors -->
                 <li>
                     <a href="dashboard" class="staffHome"></i>Home</a>
                 </li>
